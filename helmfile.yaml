@@ -25,7 +25,7 @@ repositories:
   url: https://kubernetes-charts.banzaicloud.com
 releases:
 - chart: jenkins-x/jxboot-helmfile-resources
-  version: 1.0.8
+  version: 1.0.12
   name: jxboot-helmfile-resources
   namespace: jx
   values:
@@ -43,13 +43,13 @@ releases:
   values:
   - versionStream/charts/jx-labs/jenkins-x-crds/values.yaml
 - chart: jx3/jx-pipelines-visualizer
-  version: 0.0.44
+  version: 0.0.52
   name: jx-pipelines-visualizer
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
 - chart: jx3/jx-preview
-  version: 0.0.90
+  version: 0.0.114
   name: jx-preview
   namespace: jx
 - chart: stable/nginx-ingress
@@ -65,7 +65,7 @@ releases:
   values:
   - versionStream/charts/cdf/tekton-pipeline/values.yaml.gotmpl
 - chart: jenkins-x/lighthouse
-  version: 0.0.851
+  version: 0.0.869
   name: lighthouse
   namespace: jx
   values:
@@ -94,5 +94,11 @@ releases:
   version: 1.0.0
   name: pusher-wave
   namespace: secret-infra
+- chart: jx3/jx-build-controller
+  version: 0.0.14
+  name: jx-build-controller
+  namespace: jx
+  values:
+  - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
 templates: {}
 missingFileHandler: ""
