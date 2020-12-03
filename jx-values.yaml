@@ -2,11 +2,6 @@ jxRequirements:
   autoUpdate:
     enabled: false
     schedule: ""
-  bootConfigURL: https://github.com/jenkins-x/jx3-boot-config
-  buildPacks:
-    buildPackLibrary:
-      gitRef: master
-      gitURL: https://github.com/jenkins-x/jx3-pipeline-catalog.git
   cluster:
     devEnvApprovers:
     - todo
@@ -14,38 +9,12 @@ jxRequirements:
     gitKind: github
     gitName: github
     gitServer: https://github.com
-    namespace: jx
     provider: eks
     registry: ecr.io
   environments:
-  - ingress:
-      domain: ""
-      externalDNS: false
-      namespaceSubDomain: ""
-      tls:
-        email: ""
-        enabled: false
-        production: false
-    key: dev
-  - ingress:
-      domain: ""
-      externalDNS: false
-      namespaceSubDomain: ""
-      tls:
-        email: ""
-        enabled: false
-        production: false
-    key: staging
-  - ingress:
-      domain: ""
-      externalDNS: false
-      namespaceSubDomain: ""
-      tls:
-        email: ""
-        enabled: false
-        production: false
-    key: production
-  gitops: true
+  - key: dev
+  - key: staging
+  - key: production
   ingress:
     domain: ""
     externalDNS: false
@@ -54,29 +23,9 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
-  kaniko: true
   repository: nexus
   secretStorage: vault
-  storage:
-    backup:
-      enabled: false
-      url: ""
-    logs:
-      enabled: false
-      url: ""
-    reports:
-      enabled: false
-      url: ""
-    repository:
-      enabled: false
-      url: ""
   vault: {}
-  velero:
-    schedule: ""
-    ttl: ""
-  versionStream:
-    ref: master
-    url: https://github.com/jenkins-x/jxr-versions.git
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
   enabled: false
