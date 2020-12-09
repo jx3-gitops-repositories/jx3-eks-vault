@@ -29,7 +29,7 @@ jxRequirements:
   ingress:
     domain: ""
     externalDNS: false
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: -cert-manager.
     tls:
       email: ""
       enabled: false

@@ -15,5 +15,5 @@ releases:
   values:
   - ../../versionStream/charts/jetstack/cert-manager/values.yaml.gotmpl
   - jx-values.yaml
-  forceNamespace: ""
-  skipDeps: null
+templates: {}
+renderedvalues: {}
