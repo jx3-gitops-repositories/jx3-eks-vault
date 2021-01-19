@@ -114,25 +114,19 @@
     repositoryUrl: https://storage.googleapis.com/chartmuseum.jenkins-x.io
     version: 0.1.37
   - apiVersion: v1
-    appVersion: 0.8.2
-    description: Host your own Helm Chart Repository
+    appVersion: 0.12.0
+    deprecated: true
+    description: DEPRECATED Host your own Helm Chart Repository
     home: https://github.com/helm/chartmuseum
     icon: https://raw.githubusercontent.com/helm/chartmuseum/master/logo2.png
     keywords:
     - chartmuseum
     - helm
     - charts repo
-    maintainers:
-    - email: opensource@codefresh.io
-      name: codefresh-io
-    - email: hello@cloudposse.com
-      name: cloudposse
-    - email: chartmuseum@gmail.com
-      name: chartmuseum
     name: chartmuseum
     repositoryName: stable
     repositoryUrl: https://charts.helm.sh/stable
-    version: 2.4.1
+    version: 2.14.2
   - apiVersion: v2
     appVersion: 3.0.0
     description: Jenkins X next gen cloud CI / CD platform for Kubernetes

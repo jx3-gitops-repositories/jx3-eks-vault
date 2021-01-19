@@ -68,8 +68,8 @@
 	      <td><a href='https://github.com/jenkins-x-charts/nexus'>source</a></td>
 	    </tr>
     <tr>
-	      <td><a href='https://github.com/helm/chartmuseum' title='Host your own Helm Chart Repository'> <img src='https://raw.githubusercontent.com/helm/chartmuseum/master/logo2.png' width='24px' height='24px'> chartmuseum </a></td>
-	      <td>2.4.1</td>
+	      <td><a href='https://github.com/helm/chartmuseum' title='DEPRECATED Host your own Helm Chart Repository'> <img src='https://raw.githubusercontent.com/helm/chartmuseum/master/logo2.png' width='24px' height='24px'> chartmuseum </a></td>
+	      <td>2.14.2</td>
 	      <td></td>
 	      <td><a href='https://github.com/helm/chartmuseum'>source</a></td>
 	    </tr>
