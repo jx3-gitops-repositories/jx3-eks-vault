@@ -175,18 +175,6 @@
 	      <td><a href='https://github.com/external-secrets/kubernetes-external-secrets'>source</a></td>
 	    </tr>
     <tr>
-	      <td><a href='https://banzaicloud.com/products/bank-vaults/' title='A Helm chart for banzaicloud/bank-vaults Vault operator'> <img src='' width='24px' height='24px'> vault-operator </a></td>
-	      <td>1.10.0</td>
-	      <td></td>
-	      <td><a href='https://banzaicloud.com/products/bank-vaults/'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://github.com/jenkins-x-charts/vault-instance' title='a chart for creating a Vault instance via the vault operator'> <img src='' width='24px' height='24px'> vault-instance </a></td>
-	      <td>1.0.15</td>
-	      <td></td>
-	      <td><a href='https://github.com/jenkins-x-charts/vault-instance'>source</a></td>
-	    </tr>
-    <tr>
 	      <td><a href='https://github.com/pusher/wave' title='wave chart that runs on kubernetes'> <img src='' width='24px' height='24px'> pusher-wave </a></td>
 	      <td>0.4.16</td>
 	      <td></td>
@@ -200,18 +188,6 @@
 	      <td>6.2.2</td>
 	      <td></td>
 	      <td><a href='https://github.com/external-secrets/kubernetes-external-secrets'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://banzaicloud.com/products/bank-vaults/' title='A Helm chart for banzaicloud/bank-vaults Vault operator'> <img src='' width='24px' height='24px'> vault-operator </a></td>
-	      <td>1.10.0</td>
-	      <td></td>
-	      <td><a href='https://banzaicloud.com/products/bank-vaults/'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://github.com/jenkins-x-charts/vault-instance' title='a chart for creating a Vault instance via the vault operator'> <img src='' width='24px' height='24px'> vault-instance </a></td>
-	      <td>1.0.15</td>
-	      <td></td>
-	      <td><a href='https://github.com/jenkins-x-charts/vault-instance'>source</a></td>
 	    </tr>
     <tr>
 	      <td><a href='https://github.com/pusher/wave' title='wave chart that runs on kubernetes'> <img src='' width='24px' height='24px'> pusher-wave </a></td>

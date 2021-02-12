@@ -348,39 +348,6 @@
     sources:
     - https://github.com/external-secrets/kubernetes-external-secrets
     version: 6.2.2
-  - apiVersion: v2
-    appVersion: 1.10.0
-    dependencies:
-    - condition: etcd-operator.enabled
-      name: etcd-operator
-      repository: https://charts.helm.sh/stable
-      version: 0.11.0
-    description: A Helm chart for banzaicloud/bank-vaults Vault operator
-    home: https://banzaicloud.com/products/bank-vaults/
-    maintainers:
-    - email: info@banzaicloud.com
-      name: Banzai Cloud
-    name: vault-operator
-    repositoryName: banzaicloud-stable
-    repositoryUrl: https://kubernetes-charts.banzaicloud.com
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/banzaicloud/bank-vaults
-    - https://github.com/banzaicloud/banzai-charts
-    type: application
-    version: 1.10.0
-  - apiVersion: v1
-    appVersion: v1.0.0
-    description: a chart for creating a Vault instance via the vault operator
-    home: https://github.com/jenkins-x-charts/vault-instance
-    keywords:
-    - vault
-    name: vault-instance
-    repositoryName: jx3
-    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
-    sources:
-    - https://github.com/enkins-x-charts/vault-instance
-    version: 1.0.15
   - apiVersion: v1
     appVersion: v0.4.0
     description: wave chart that runs on kubernetes
@@ -410,39 +377,6 @@
     sources:
     - https://github.com/external-secrets/kubernetes-external-secrets
     version: 6.2.2
-  - apiVersion: v2
-    appVersion: 1.10.0
-    dependencies:
-    - condition: etcd-operator.enabled
-      name: etcd-operator
-      repository: https://charts.helm.sh/stable
-      version: 0.11.0
-    description: A Helm chart for banzaicloud/bank-vaults Vault operator
-    home: https://banzaicloud.com/products/bank-vaults/
-    maintainers:
-    - email: info@banzaicloud.com
-      name: Banzai Cloud
-    name: vault-operator
-    repositoryName: banzaicloud-stable
-    repositoryUrl: https://kubernetes-charts.banzaicloud.com
-    sources:
-    - https://github.com/hashicorp/vault
-    - https://github.com/banzaicloud/bank-vaults
-    - https://github.com/banzaicloud/banzai-charts
-    type: application
-    version: 1.10.0
-  - apiVersion: v1
-    appVersion: v1.0.0
-    description: a chart for creating a Vault instance via the vault operator
-    home: https://github.com/jenkins-x-charts/vault-instance
-    keywords:
-    - vault
-    name: vault-instance
-    repositoryName: jx3
-    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
-    sources:
-    - https://github.com/enkins-x-charts/vault-instance
-    version: 1.0.15
   - apiVersion: v1
     appVersion: v0.4.0
     description: wave chart that runs on kubernetes
