@@ -70,5 +70,12 @@ releases:
   values:
   - ../../versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
   - jx-values.yaml
+- chart: jx3/acme
+  version: 0.0.20
+  condition: jxRequirementsIngressTLS.enabled
+  name: acme-jx
+  values:
+  - ../../versionStream/charts/jx3/acme-jx/values.yaml.gotmpl
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
