@@ -26,7 +26,6 @@ jxRequirements:
     gitName: github
     gitServer: https://github.com
     provider: eks
-    registry: ecr.io
   environments:
   - key: dev
   - key: staging
