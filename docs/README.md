@@ -95,6 +95,12 @@
 	      <td></td>
 	    </tr>
     <tr>
+	      <td><a href='https://jenkins-x.io/' title='Jenkins X next gen cloud CI / CD platform for Kubernetes'> <img src='https://jenkins-x.github.io/jenkins-x-website/img/profile.png' width='24px' height='24px'> jx-kh-check </a></td>
+	      <td>0.0.56</td>
+	      <td></td>
+	      <td><a href='https://jenkins-x.io/'>source</a></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>jx</h3></td>
 		    </tr>
 	    <tr>
@@ -160,6 +166,12 @@
 	      <td></td>
 	    </tr>
     <tr>
+	      <td><a href='https://jenkins-x.io/' title='Jenkins X next gen cloud CI / CD platform for Kubernetes'> <img src='https://jenkins-x.github.io/jenkins-x-website/img/profile.png' width='24px' height='24px'> jx-kh-check </a></td>
+	      <td>0.0.56</td>
+	      <td></td>
+	      <td><a href='https://jenkins-x.io/'>source</a></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>kuberhealthy</h3></td>
 		    </tr>
 	    <tr>
@@ -200,7 +212,7 @@
 		    </tr>
 	    <tr>
 	      <td><a href='https://github.com/external-secrets/kubernetes-external-secrets' title='Kubernetes External Secrets CustomResourceDefinition'> <img src='' width='24px' height='24px'> kubernetes-external-secrets </a></td>
-	      <td>6.2.2</td>
+	      <td>6.3.0</td>
 	      <td></td>
 	      <td><a href='https://github.com/external-secrets/kubernetes-external-secrets'>source</a></td>
 	    </tr>
@@ -215,7 +227,7 @@
 		    </tr>
 	    <tr>
 	      <td><a href='https://github.com/external-secrets/kubernetes-external-secrets' title='Kubernetes External Secrets CustomResourceDefinition'> <img src='' width='24px' height='24px'> kubernetes-external-secrets </a></td>
-	      <td>6.2.2</td>
+	      <td>6.3.0</td>
 	      <td></td>
 	      <td><a href='https://github.com/external-secrets/kubernetes-external-secrets'>source</a></td>
 	    </tr>
