@@ -1,0 +1,18 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: kuberhealthy
+repositories:
+- name: jx3
+  url: https://storage.googleapis.com/jenkinsxio/charts
+releases:
+- chart: jx3/kh-tls-check
+  version: 0.0.8
+  condition: jxRequirementsTLSCheck.enabled
+  name: kh-tls-check
+  values:
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}
