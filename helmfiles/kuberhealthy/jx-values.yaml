@@ -25,8 +25,8 @@ jxRequirements:
     gitKind: github
     gitName: github
     gitServer: https://github.com
-    provider: gke
-    registry: gcr.io
+    provider: eks
+    registry: ecr.io
   environments:
   - key: dev
   - key: staging
@@ -41,7 +41,7 @@ jxRequirements:
       enabled: false
       production: false
   repository: nexus
-  secretStorage: gsm
+  secretStorage: vault
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
@@ -53,4 +53,4 @@ jxRequirementsKuberhealthy:
 jxRequirementsTLSCheck:
   enabled: false
 jxRequirementsVault:
-  enabled: false
+  enabled: true
