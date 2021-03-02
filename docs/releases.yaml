@@ -163,7 +163,7 @@
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
     sources:
     - https://github.com/jenkins-x-plugins/jx-build-controller
-    version: 0.0.32
+    version: 0.0.33
   - apiVersion: v1
     description: Acme
     icon: https://avatars2.githubusercontent.com/u/35583233?s=200&v=4
@@ -306,7 +306,7 @@
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
     sources:
     - https://github.com/jenkins-x-plugins/jx-build-controller
-    version: 0.0.32
+    version: 0.0.33
   - apiVersion: v1
     description: Acme
     icon: https://avatars2.githubusercontent.com/u/35583233?s=200&v=4
