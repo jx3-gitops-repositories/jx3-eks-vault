@@ -24,7 +24,7 @@ releases:
   - ../../versionStream/charts/bitnami/external-dns/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jx3/jxboot-helmfile-resources
-  version: 1.0.55
+  version: 1.0.56
   name: jxboot-helmfile-resources
   values:
   - ../../versionStream/charts/jx3/jxboot-helmfile-resources/values.yaml.gotmpl
@@ -36,7 +36,7 @@ releases:
   - ../../versionStream/charts/jx3/jenkins-x-crds/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jx3/jx-pipelines-visualizer
-  version: 1.6.6
+  version: 1.6.11
   name: jx-pipelines-visualizer
   values:
   - ../../versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
