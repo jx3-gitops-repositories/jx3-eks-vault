@@ -24,7 +24,7 @@ releases:
   - ../../versionStream/charts/bitnami/external-dns/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jx3/jxboot-helmfile-resources
-  version: 1.0.63
+  version: 1.0.64
   name: jxboot-helmfile-resources
   values:
   - ../../versionStream/charts/jx3/jxboot-helmfile-resources/values.yaml.gotmpl
