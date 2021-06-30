@@ -9,7 +9,6 @@ repositories:
   url: https://storage.googleapis.com/jenkinsxio/charts
 releases:
 - chart: jx3/kh-tls-check
-  version: 0.0.8
   condition: jxRequirementsTLSCheck.enabled
   name: kh-tls-check
   values:
