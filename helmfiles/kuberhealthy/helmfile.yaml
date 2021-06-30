@@ -5,10 +5,10 @@ environments:
     - jx-values.yaml
 namespace: kuberhealthy
 repositories:
-- name: jx3
-  url: https://storage.googleapis.com/jenkinsxio/charts
+- name: jxgh
+  url: https://jenkins-x-charts.github.io/repo
 releases:
-- chart: jx3/kh-tls-check
+- chart: jxgh/kh-tls-check
   condition: jxRequirementsTLSCheck.enabled
   name: kh-tls-check
   values:
