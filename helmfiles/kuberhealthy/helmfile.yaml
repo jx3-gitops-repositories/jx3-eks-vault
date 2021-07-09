@@ -9,6 +9,7 @@ repositories:
   url: https://jenkins-x-charts.github.io/repo
 releases:
 - chart: jxgh/kh-tls-check
+  version: 0.0.10
   condition: jxRequirementsTLSCheck.enabled
   name: kh-tls-check
   values:
