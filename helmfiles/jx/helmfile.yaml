@@ -107,7 +107,6 @@ releases:
     name: cd-indicators
     values:
       - ../../versionStream/charts/jxgh/cd-indicators/values.yaml
-      - ../../versionStream/charts/jx3/cd-indicators/values.yaml
       - ./cd-ind.values.yaml
       - jx-values.yaml
 templates: {}
