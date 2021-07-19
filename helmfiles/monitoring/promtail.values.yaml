@@ -1,0 +1,2 @@
+config:
+  lokiAddress: http://loki.monitoring:3100/loki/api/v1/push

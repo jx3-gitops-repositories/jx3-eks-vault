@@ -1,0 +1,19 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: nfs
+repositories:
+- name: stable
+  url: https://charts.helm.sh/stable
+releases:
+- chart: stable/nfs-server-provisioner
+  version: 1.1.1
+  name: nfs
+  namespace: nfs
+  values:
+  - jx-values.yaml
+  - ../../versionStream/charts/stable/nfs-server-provisioner/values.yaml.gotmpl
+templates: {}
+renderedvalues: {}

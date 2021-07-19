@@ -6,5 +6,7 @@ helmfiles:
 - path: helmfiles/nginx/helmfile.yaml
 - path: helmfiles/secret-infra/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
+- path: helmfiles/nfs/helmfile.yaml
+- path: helmfiles/monitoring/helmfile.yaml
 templates: {}
 renderedvalues: {}
