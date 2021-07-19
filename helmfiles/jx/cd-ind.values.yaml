@@ -1,0 +1,5 @@
+grafana:
+  dashboards:
+    label: grafana_dashboard
+  datasources:
+    label: grafana_datasource
