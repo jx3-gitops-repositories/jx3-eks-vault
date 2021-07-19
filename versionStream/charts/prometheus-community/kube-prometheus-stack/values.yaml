@@ -1,0 +1,20 @@
+defaultValues:
+  runbookUrl: https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md
+alertmanager:
+  templateFiles:
+    sdlc-slack-msg.tmpl: |-
+      {{ define "cluster" }}{{ .ExternalURL | reReplaceAll ".*alertmanager\\.(.*)" "$1" }}{{ end }}
+      {{ define "slack.sdlc.text" }}
+      {{- $root := . -}}
+      {{ range .Alerts }}
+          *Alert:* {{ .Annotations.summary }} - `{{ .Labels.severity }}`
+          *Cluster:*  {{ template "cluster" $root }}
+          *Description:* {{ .Annotations.description }}
+          *Graph:* :chart_with_upwards_trend: *<{{ .GeneratorURL }}|Graph>*
+          {{- if .Annotations.runbook }}*Runbook:* :notebook: *<{{ .Annotations.runbook }}|Runbook>*{{ end }}
+          *Details:*
+            {{ range .Labels.SortedPairs }}
+            • *{{ .Name }}:* `{{ .Value }}`
+            {{ end }}
+      {{ end }}
+      {{ end }}

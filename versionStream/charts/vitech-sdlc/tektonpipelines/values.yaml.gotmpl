@@ -1,0 +1,10 @@
+nginx:
+    ingress:
+        hosts: []
+        enabled: true
+        tls: []
+        hostname: reports.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+
+reports:
+    ingress:
+        hostname: reports.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}

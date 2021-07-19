@@ -1,0 +1,16 @@
+nginx:
+    ingress:
+        enabled: true
+        tls: []
+        hosts:
+            - name: large-test-reports.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+
+selenium:
+    hub:
+        ingress:
+            enabled: true
+            hosts:
+                - selenium-hub.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+    chrome:
+          enabled: true
+          replicas: 1

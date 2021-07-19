@@ -10,35 +10,36 @@ spec:
   merger:
     blocker_label: ""
     max_goroutines: 0
-    merge_method: merge
+    merge_method: squash
     policy:
       from-branch-protection: true
-      optional-contexts: { }
-      required-contexts: { }
-      required-if-present-contexts: { }
+      optional-contexts: {}
+      required-contexts: {}
+      required-if-present-contexts: {}
       skip-unknown-contexts: false
     pr_status_base_url: ""
-    squash_label: ""
-    target_url: http://lighthouse{{ .Requirements.ingress.namespaceSubDomain }}{{ .Requirements.ingress.domain }}/merge/status
+    squash_label: "squash"
+    target_url: http://lighthouse{{ .Requirements.ingress.namespaceSubDomain }}{{
+      .Requirements.ingress.domain }}/merge/status
   # lets look in the source repository for trigger files
   in_repo: true
   plugins:
     entries:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
+    - approve
+    - assign
+    - blunderbuss
+    - help
+    - hold
+    - lgtm
+    - lifecycle
+    - override
+    - size
+    - trigger
+    - wip
+    - heart
+    - cat
+    - dog
+    - pony
   external_plugins:
     Replace: true
     entries:
@@ -47,34 +48,34 @@ spec:
     - name: lighthouse-webui-plugin
       endpoint: "http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events"
   queries:
-    - excludedBranches: { }
-      included_branches: { }
-      labels:
-        entries:
-          - approved
-      milestone: ""
-      missingLabels:
-        entries:
-          - do-not-merge
-          - do-not-merge/hold
-          - do-not-merge/work-in-progress
-          - needs-ok-to-test
-          - needs-rebase
-      review_approved_required: false
-    - excludedBranches: { }
-      included_branches: { }
-      labels:
-        entries:
-          - updatebot
-      milestone: ""
-      missingLabels:
-        entries:
-          - do-not-merge
-          - do-not-merge/hold
-          - do-not-merge/work-in-progress
-          - needs-ok-to-test
-          - needs-rebase
-      review_approved_required: false
+  - excludedBranches: {}
+    included_branches: {}
+    labels:
+      entries:
+      - approved
+    milestone: ""
+    missingLabels:
+      entries:
+      - do-not-merge
+      - do-not-merge/hold
+      - do-not-merge/work-in-progress
+      - needs-ok-to-test
+      - needs-rebase
+    review_approved_required: false
+  - excludedBranches: {}
+    included_branches: {}
+    labels:
+      entries:
+      - updatebot
+    milestone: ""
+    missingLabels:
+      entries:
+      - do-not-merge
+      - do-not-merge/hold
+      - do-not-merge/work-in-progress
+      - needs-ok-to-test
+      - needs-rebase
+    review_approved_required: false
   policy:
     protect_tested: true
   schedulerAgent:
@@ -85,4 +86,4 @@ spec:
     only_org_members: false
     trusted_org: todo
   welcome:
-    - message_template: Welcome
+  - message_template: Welcome

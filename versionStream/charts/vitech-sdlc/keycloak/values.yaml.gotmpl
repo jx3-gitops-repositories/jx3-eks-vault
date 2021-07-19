@@ -1,0 +1,37 @@
+keycloak:
+    extraVolumes: |
+        - name: keycloak-relams
+          secret:
+              secretName: keycloak-relams
+
+    extraVolumeMounts: |
+        - name: keycloak-relams
+          mountPath: "/realm/"
+          readOnly: true
+
+    extraEnv: |
+        - name: KEYCLOAK_IMPORT
+          value: /realm/default-relam.json
+
+    #  serviceMonitor:
+    #    enabled: true
+
+    #  extraInitContainers:
+    #    - name: init-script-downloader
+    #        image: appropriate/curl
+    #        args:
+    #          - "-o"
+    #          - "/opt/jboss/keycloak/standalone/deployments/keycloak-metrics-spi-2.0.1.jar" # we are saving downloaded file as init.sql in /tmp/data directory
+    #          - "https://github.com/aerogear/keycloak-metrics-spi/releases/download/2.0.1/keycloak-metrics-spi-2.0.1.jar" # download url
+    #        volumeMounts:
+    #          - name: deployments
+    #            mountPath: /opt/jboss/keycloak/standalone/deployments
+    ingress:
+        enabled: true
+        tls: []
+        rules:
+            - host: 'keycloak.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}'
+              paths:
+              - /
+    postgresql:
+        enabled: true

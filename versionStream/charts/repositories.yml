@@ -1,4 +1,10 @@
 repositories:
+- name: prometheus-community
+  urls:
+  - https://prometheus-community.github.io/helm-charts
+- name: vitech-sdlc
+  urls:
+  - https://vitech-team.github.io/sdlc-charts
 - prefix: banzaicloud-stable
   urls:
   - https://kubernetes-charts.banzaicloud.com
@@ -25,7 +31,7 @@ repositories:
   - https://storage.googleapis.com/chartmuseum.jenkins-x.io
 - prefix: jenkinsci
   urls:
-  -  https://charts.jenkins.io
+  - https://charts.jenkins.io
 - prefix: jetstack
   urls:
   - https://charts.jetstack.io

@@ -13,29 +13,30 @@ spec:
     merge_method: merge
     policy:
       from-branch-protection: true
-      optional-contexts: { }
-      required-contexts: { }
-      required-if-present-contexts: { }
+      optional-contexts: {}
+      required-contexts: {}
+      required-if-present-contexts: {}
       skip-unknown-contexts: false
     pr_status_base_url: ""
     squash_label: ""
-    target_url: http://lighthouse{{ .Requirements.ingress.namespaceSubDomain }}{{ .Requirements.ingress.domain }}/merge/status
+    target_url: http://lighthouse{{ .Requirements.ingress.namespaceSubDomain }}{{
+      .Requirements.ingress.domain }}/merge/status
   plugins:
     entries:
-      - config-updater
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - override
+    - config-updater
+    - approve
+    - assign
+    - blunderbuss
+    - help
+    - hold
+    - lgtm
+    - lifecycle
+    - size
+    - trigger
+    - wip
+    - heart
+    - cat
+    - override
   external_plugins:
     Replace: true
     entries:
@@ -48,55 +49,55 @@ spec:
   postsubmits:
     replace: true
     entries:
-      - agent: tekton
-        branches:
-          - master
-          - main
-        cluster: ""
-        context: ""
-        labels:
-          aadpodidbinding: tekton-bot
-        max_concurrency: 0
-        name: promotion
-        report: false
-        run_if_changed: ""
-        skip_branches: [ ]
+    - agent: tekton
+      branches:
+      - master
+      - main
+      cluster: ""
+      context: ""
+      labels:
+        aadpodidbinding: tekton-bot
+      max_concurrency: 0
+      name: promotion
+      report: false
+      run_if_changed: ""
+      skip_branches: []
   presubmits:
     replace: true
     entries:
-      - agent: tekton
-        always_run: true
-        branches: [ ]
-        cluster: ""
-        context: promotion-build
-        labels:
-          aadpodidbinding: tekton-bot
-        max_concurrency: 0
-        name: promotion-build
-        optional: false
-        report: true
-        rerun_command: /test this
-        run_if_changed: ""
-        skip_branches: [ ]
-        trigger: (?m)^/test( all| this),?(\s+|$)
+    - agent: tekton
+      always_run: true
+      branches: []
+      cluster: ""
+      context: promotion-build
+      labels:
+        aadpodidbinding: tekton-bot
+      max_concurrency: 0
+      name: promotion-build
+      optional: false
+      report: true
+      rerun_command: /test this
+      run_if_changed: ""
+      skip_branches: []
+      trigger: (?m)^/test( all| this),?(\s+|$)
   merge_method: ""
   protection_policy:
     required_status_checks:
       contexts:
         entries:
-          - promotion-build
+        - promotion-build
   queries:
-    - excludedBranches: { }
-      included_branches: { }
-      milestone: ""
-      missingLabels:
-        entries:
-          - do-not-merge
-          - do-not-merge/hold
-          - do-not-merge/work-in-progress
-          - needs-ok-to-test
-          - needs-rebase
-      review_approved_required: true
+  - excludedBranches: {}
+    included_branches: {}
+    milestone: ""
+    missingLabels:
+      entries:
+      - do-not-merge
+      - do-not-merge/hold
+      - do-not-merge/work-in-progress
+      - needs-ok-to-test
+      - needs-rebase
+    review_approved_required: true
   schedulerAgent:
     agent: tekton
   trigger:
@@ -105,4 +106,4 @@ spec:
     only_org_members: false
     trusted_org: todo
   welcome:
-    - message_template: Welcome
+  - message_template: Welcome
