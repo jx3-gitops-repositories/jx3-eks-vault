@@ -40,8 +40,8 @@ releases:
     name: jx-pipelines-visualizer
     values:
       - ../../versionStream/charts/jxgh/jx-pipelines-visualizer/values.yaml.gotmpl
-      - jx-values.yaml
       - pv-values.yaml
+      - jx-values.yaml
   - chart: jxgh/jx-preview
     version: 0.0.185
     name: jx-preview
