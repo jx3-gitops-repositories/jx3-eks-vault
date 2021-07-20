@@ -1,8 +1,7 @@
 # global values passed into all helm charts by default
 jx:
-  imagePullSecrets:
-   - tekton-container-registry-auth
   # optional list of image pull secrets to use to pull container images
+  imagePullSecrets: []
 
   # whether to create a Release CRD when installing charts with Release CRDs included
   releaseCRD: true

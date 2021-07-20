@@ -19,7 +19,7 @@ spec:
   ingress:
     domain: ""
     externalDNS: false
-    namespaceSubDomain: .
+    namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
