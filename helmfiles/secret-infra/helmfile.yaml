@@ -19,7 +19,7 @@ releases:
   - ../../versionStream/charts/external-secrets/kubernetes-external-secrets/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/pusher-wave
-  version: 0.4.18
+  version: 0.4.21
   name: pusher-wave
   values:
   - jx-values.yaml
