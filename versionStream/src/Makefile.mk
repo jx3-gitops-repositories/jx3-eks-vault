@@ -111,6 +111,8 @@ no-gitops-scheduler:
 fetch: init $(COPY_SOURCE) $(REPOSITORY_RESOLVE)
 # set any missing defaults in the secrets mapping file
 	jx secret convert edit
+	
+	jx secret convert --source-dir $(OUTPUT_DIR) -r $(VAULT_ROLE)
 
 # lets resolve chart versions and values from the version stream
 	jx gitops helmfile resolve
