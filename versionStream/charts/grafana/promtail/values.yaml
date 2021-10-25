@@ -1,7 +1,7 @@
 # https://github.com/grafana/helm-charts/blob/promtail-3.5.0/charts/promtail/values.yaml
 
 config:
-  lokiAddress: http://loki.jx-observability:3100/loki/api/v1/push
+  lokiAddress: http://loki.monitoring:3100/loki/api/v1/push
   snippets:
     pipelineStages:
     - cri: {}

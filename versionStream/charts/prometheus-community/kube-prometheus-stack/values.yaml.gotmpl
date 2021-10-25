@@ -1,4 +1,12 @@
 grafana:
+  grafana.ini:
+    server:
+      domain: grafana.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+      root_url: "http://grafana.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}"
+      serve_from_sub_path: true
+    analytics:
+      reporting_enabled: false
+      check_for_updates: false
     plugins:
         - grafana-piechart-panel 1.6.1
         - briangann-datatable-panel 1.0.3
@@ -31,13 +39,28 @@ grafana:
     ingress:
         enabled: true
         hosts:
-            - grafana.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+          - grafana.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+      {{- if .Values.jxRequirements.ingress.tls.enabled }}
+        tls:
+          - hosts:
+              - grafana.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+            {{- if hasKey .Values.jxRequirements.ingress.tls "secretName" }}
+            secretName: "{{ .Values.jxRequirements.ingress.tls.secretName }}"
+            {{- else if .Values.jxRequirements.ingress.tls.production }}
+            secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p"
+            {{- else }}
+            secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-s"
+      {{- end }}
+    {{- end }}
     sidecar:
         dashboards:
             searchNamespace: ALL
         datasources:
             enabled: true
             searchNamespace: ALL
+        notifiers:
+          enabled: true
+          searchNamespace: ALL
 
 alertmanager:
     ingress:

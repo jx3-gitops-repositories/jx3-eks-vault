@@ -1,0 +1,23 @@
+config:
+    clientID: ""
+    clientSecret: ""
+
+extraArgs:
+        {{- range $key, $val := .Values.jxRequirements.environments }}
+        {{- if hasKey $val "key" }}
+        {{- if eq $val.key "dev" }}
+    github-org: {{ $val.owner }}
+        {{- end }}
+        {{- end }}
+        {{- end }}
+    provider: github
+    whitelist-domain: .{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+    cookie-domain: .{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+    redirect-url: http://auth.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}/oauth2/callback
+    cookie-secure: 'false'
+
+ingress:
+    enabled: true
+    path: /
+    hosts:
+        - auth.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}

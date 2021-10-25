@@ -1,0 +1,7 @@
+ingress:
+    defaultHost: tekton-dashboard.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+        {{- if .Values.jxRequirements.ingress.tls.enabled }}
+    defaultAuthUrl: https://auth.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+        {{- else}}
+    defaultAuthUrl: http://auth.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+        {{- end }}

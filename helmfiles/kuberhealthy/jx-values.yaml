@@ -33,7 +33,6 @@ jxRequirements:
   - key: production
   ingress:
     domain: change.me
-    externalDNS: false
     kind: ingress
     namespaceSubDomain: -kuberhealthy.
     tls:

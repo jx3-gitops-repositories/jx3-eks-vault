@@ -1,5 +1,10 @@
 # https://github.com/jenkins-x/cd-indicators/blob/main/charts/cd-indicators/values.yaml
 
+grafana:
+  dashboards:
+    label: grafana_dashboard
+  datasources:
+    label: grafana_datasource
 secrets:
   postgres:
     password:
