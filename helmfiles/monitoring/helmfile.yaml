@@ -33,7 +33,6 @@ releases:
   values:
   - ../../versionStream/charts/jxgh/grafana-dashboard/values.yaml.gotmpl
   - jx-values.yaml
-  - ./grafana.values.yaml
 - chart: grafana/loki
   version: 2.5.0
   name: loki
@@ -46,7 +45,6 @@ releases:
   values:
   - ../../versionStream/charts/grafana/promtail/values.yaml
   - jx-values.yaml
-  - ./promtail.values.yaml
 - chart: grafana/tempo
   version: 0.6.8
   name: tempo
