@@ -4,7 +4,7 @@ repositories:
   - https://prometheus-community.github.io/helm-charts
 - name: vitech-sdlc
   urls:
-  - https://vitech-team.github.io/sdlc-charts
+  - https://vitech-team-sdlc.github.io/sdlc-charts
 - prefix: banzaicloud-stable
   urls:
   - https://kubernetes-charts.banzaicloud.com

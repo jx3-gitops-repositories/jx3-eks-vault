@@ -10,7 +10,7 @@ repositories:
 - name: stable
   url: https://charts.helm.sh/stable
 - name: vitech-sdlc
-  url: https://vitech-team.github.io/sdlc-charts
+  url: https://vitech-team-sdlc.github.io/sdlc-charts
 - name: jxgh
   url: https://jenkins-x-charts.github.io/repo
 - name: k8s-at-home

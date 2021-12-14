@@ -8,7 +8,7 @@ repositories:
 - name: prometheus-community
   url: https://prometheus-community.github.io/helm-charts
 - name: vitech-sdlc
-  url: https://vitech-team.github.io/sdlc-charts
+  url: https://vitech-team-sdlc.github.io/sdlc-charts
 - name: grafana
   url: https://grafana.github.io/helm-charts
 - name: jxgh
