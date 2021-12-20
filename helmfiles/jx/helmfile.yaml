@@ -17,9 +17,11 @@ repositories:
   url: https://k8s-at-home.com/charts
 releases:
 - chart: jxgh/lighthouse-webui-plugin
+  version: 0.1.7
   name: lighthouse-webui-plugin
   values:
-    - jx-values.yaml
+  - jx-values.yaml
+  - ../../versionStream/charts/jxgh/lighthouse-webui-plugin/values.yaml.gotmpl
 - chart: bitnami/external-dns
   version: 5.0.0
   condition: jxRequirementsIngressExternalDNS.enabled
