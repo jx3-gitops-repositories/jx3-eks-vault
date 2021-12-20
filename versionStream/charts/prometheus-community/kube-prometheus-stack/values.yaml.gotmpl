@@ -7,67 +7,67 @@ grafana:
     analytics:
       reporting_enabled: false
       check_for_updates: false
-    plugins:
-        - grafana-piechart-panel 1.6.1
-        - briangann-datatable-panel 1.0.3
-    additionalDataSources:
-        - name: Loki
-          uid: loki
-          type: loki
-          access: proxy
-          url: http://loki.monitoring:3100
-          version: 1
-          jsonData:
-              derivedFields:
-                  - datasourceUid: tempo
-                      # matches variations of "traceID" fields, either in JSON or logfmt
-                    matcherRegex: (?:[Tt]race[-_]?[Ii][Dd])[\\]?["]?[=:][ ]?[\\]?["]?(\w+)
-                    name: TraceID
-                      # url will be interpreted as query for the datasource
-                    url: "$${__value.raw}"
-        - name: Tempo
-          uid: tempo
-          type: tempo
-          access: proxy
-          url: http://tempo.monitoring:3100
-          version: 1
-          jsonData:
-              tracesToLogs:
-                  datasourceUid: loki
-    testFramework:
-        enabled: false
-    ingress:
-        enabled: true
-        hosts:
+  plugins:
+    - grafana-piechart-panel 1.6.1
+    - briangann-datatable-panel 1.0.3
+  additionalDataSources:
+    - name: Loki
+      uid: loki
+      type: loki
+      access: proxy
+      url: http://loki.monitoring:3100
+      version: 1
+      jsonData:
+        derivedFields:
+          - datasourceUid: tempo
+            # matches variations of "traceID" fields, either in JSON or logfmt
+            matcherRegex: (?:[Tt]race[-_]?[Ii][Dd])[\\]?["]?[=:][ ]?[\\]?["]?(\w+)
+            name: TraceID
+            # url will be interpreted as query for the datasource
+            url: "$${__value.raw}"
+    - name: Tempo
+      uid: tempo
+      type: tempo
+      access: proxy
+      url: http://tempo.monitoring:3100
+      version: 1
+      jsonData:
+        tracesToLogs:
+          datasourceUid: loki
+  testFramework:
+    enabled: false
+  ingress:
+    enabled: true
+    hosts:
+      - grafana.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+    {{- if .Values.jxRequirements.ingress.tls.enabled }}
+    tls:
+      - hosts:
           - grafana.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
-      {{- if .Values.jxRequirements.ingress.tls.enabled }}
-        tls:
-          - hosts:
-              - grafana.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
-            {{- if hasKey .Values.jxRequirements.ingress.tls "secretName" }}
-            secretName: "{{ .Values.jxRequirements.ingress.tls.secretName }}"
-            {{- else if .Values.jxRequirements.ingress.tls.production }}
-            secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p"
-            {{- else }}
-            secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-s"
-      {{- end }}
+        {{- if hasKey .Values.jxRequirements.ingress.tls "secretName" }}
+        secretName: "{{ .Values.jxRequirements.ingress.tls.secretName }}"
+        {{- else if .Values.jxRequirements.ingress.tls.production }}
+        secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p"
+        {{- else }}
+        secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-s"
     {{- end }}
-    sidecar:
-        dashboards:
-            searchNamespace: ALL
-        datasources:
-            enabled: true
-            searchNamespace: ALL
-        notifiers:
-          enabled: true
-          searchNamespace: ALL
+  {{- end }}
+  sidecar:
+    dashboards:
+      searchNamespace: ALL
+    datasources:
+      enabled: true
+      searchNamespace: ALL
+    notifiers:
+      enabled: true
+      searchNamespace: ALL
 
 alertmanager:
-    ingress:
-        enabled: false
-        hosts: [ ]
+  ingress:
+    enabled: false
+    hosts: [ ]
 
 prometheus:
-    ingress:
-        enabled: false
-        hosts: [ ]
+  ingress:
+    enabled: false
+    hosts: [ ]

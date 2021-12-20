@@ -15,14 +15,14 @@ repositories:
   url: https://jenkins-x-charts.github.io/repo
 releases:
 - chart: prometheus-community/kube-prometheus-stack
-  version: 16.12.2
+  version: 19.2.2
   name: monitoring
   values:
   - jx-values.yaml
   - ../../versionStream/charts/prometheus-community/kube-prometheus-stack/values.yaml
   - ../../versionStream/charts/prometheus-community/kube-prometheus-stack/values.yaml.gotmpl
 - chart: vitech-sdlc/monitoring
-  version: 0.3.0
+  version: 0.4.1
   name: prometheus-monitors
   values:
   - jx-values.yaml

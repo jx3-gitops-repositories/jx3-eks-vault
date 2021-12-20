@@ -5,11 +5,13 @@ grafana:
     label: grafana_dashboard
   datasources:
     label: grafana_datasource
+
 secrets:
   postgres:
     password:
       secretKeyRef:
         name: cd-indicators-postgresql-password
+
 # embedded postgresql chart
 # https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
 postgresql:

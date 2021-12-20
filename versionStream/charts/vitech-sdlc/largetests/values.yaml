@@ -3,6 +3,8 @@ pvc:
 resources:
   requests:
     storage: "2Gi"
+
+
 nginx:
   serverBlock: |-
     server {
@@ -14,26 +16,27 @@ nginx:
       }
     }
   extraVolumes:
-  - name: large-test-reports
-    persistentVolumeClaim:
-      claimName: large-test
-      readOnly: true
+    - name: large-test-reports
+      persistentVolumeClaim:
+        claimName: large-test
+        readOnly: true
   extraVolumeMounts:
-  - mountPath: /large-test-reports
-    name: large-test-reports
-    readOnly: true
+    - mountPath: /large-test-reports
+      name: large-test-reports
+      readOnly: true
   ingress:
     enabled: false
     tls:
     hosts:
-    - name: large-test-reports.{{ .Values.jxRequirements.ingress.domain }}
+      - name: large-test-reports.{{ .Values.jxRequirements.ingress.domain }}
+
 selenium:
   selenium:
     hub:
       ingress:
         enabled: false
         hosts:
-        - selenium-hub.{{ .Values.jxRequirements.ingress.domain }}
+          - selenium-hub.{{ .Values.jxRequirements.ingress.domain }}
     chrome:
       enabled: true
     firefox:

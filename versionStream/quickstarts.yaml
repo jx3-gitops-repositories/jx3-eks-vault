@@ -102,15 +102,15 @@ spec:
     language: Java
     name: vertx-rest-prometheus
     version: 1.0.0+fd180fd76
-  - downloadZipURL: https://github.com/vitech-team/sdlc-java-gradle/archive/master.zip
+  - downloadZipURL: https://github.com/vitech-team-sdlc/sdlc-java-gradle/archive/refs/heads/master.zip
     language: Java
     name: vitech-sdlc-java-gradle
     version: 1.0.0
-  - downloadZipURL: https://github.com/vitech-team/sdlc-angular/archive/master.zip
+  - downloadZipURL: https://github.com/vitech-team-sdlc/sdlc-angular/archive/refs/heads/master.zip
     language: JavaScript
     name: vitech-sdlc-angular
     version: 1.0.0
-  - downloadZipURL: https://github.com/vitech-team/sdlc-react/archive/main.zip
+  - downloadZipURL: https://github.com/vitech-team-sdlc/sdlc-react/archive/refs/heads/main.zip
     language: JavaScript
     name: vitech-sdlc-react
     version: 1.0.0
