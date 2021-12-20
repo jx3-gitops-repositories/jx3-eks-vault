@@ -5,7 +5,7 @@ metadata:
 upstream:
   type: git
   git:
-    commit: 674a439551092cf1baba9a3988b491b53a6331be
+    commit: 3bbabfe5b95a3577f4a6d5b174fbfb67177f431f
     repo: https://github.com/vitech-team-sdlc/jx3-versions
     directory: /
     ref: master
