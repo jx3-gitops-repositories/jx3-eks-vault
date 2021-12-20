@@ -6,6 +6,6 @@ upstream:
   type: git
   git:
     commit: eeca90e7dda6c307aeba61ab90dc9f86ef871c3f
-    repo: https://github.com/jenkins-x/jxr-versions
+    repo: https://github.com/vitech-team-sdlc/jx3-versions
     directory: /
     ref: master
