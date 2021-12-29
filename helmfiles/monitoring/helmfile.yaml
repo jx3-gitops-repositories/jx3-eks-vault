@@ -22,7 +22,7 @@ releases:
   - ../../versionStream/charts/prometheus-community/kube-prometheus-stack/values.yaml
   - ../../versionStream/charts/prometheus-community/kube-prometheus-stack/values.yaml.gotmpl
 - chart: vitech-sdlc/monitoring
-  version: 0.4.1
+  version: 0.4.2
   name: prometheus-monitors
   values:
   - jx-values.yaml
