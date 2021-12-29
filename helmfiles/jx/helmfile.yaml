@@ -101,7 +101,6 @@ releases:
   name: tektonpipelines
   values:
   - jx-values.yaml
-  - ../../versionStream/charts/vitech-sdlc/tektonpipelines/values.yaml.gotmpl
 - chart: k8s-at-home/oauth2-proxy
   version: 5.0.3
   name: oauth2-proxy
