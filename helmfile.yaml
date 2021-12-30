@@ -3,7 +3,7 @@ helmfiles:
 - path: helmfiles/cert-manager/helmfile.yaml
 - path: helmfiles/jx/helmfile.yaml
 - path: helmfiles/kuberhealthy/helmfile.yaml
-- path: helmfiles/nginx/helmfile.yaml
+#- path: helmfiles/nginx/helmfile.yaml # disable nginx helm deployment
 - path: helmfiles/secret-infra/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
 - path: helmfiles/nfs/helmfile.yaml
