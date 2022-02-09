@@ -6,6 +6,8 @@ config:
   clientSecret: ""
 
 ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
   # -- Enable Ingress
   enabled: true
   # -- Ingress accepted path
