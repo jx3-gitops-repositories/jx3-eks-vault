@@ -91,7 +91,7 @@ releases:
   - ../../versionStream/charts/jxgh/health-checks-jx/values.yaml.gotmpl
   - jx-values.yaml
 - chart: vitech-sdlc/secret
-  version: 0.5.0
+  version: 0.5.1
   name: secret
   values:
   - jx-values.yaml

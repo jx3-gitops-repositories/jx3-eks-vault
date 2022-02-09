@@ -5,3 +5,16 @@ ingress:
         {{- else}}
     defaultAuthUrl: http://auth.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
         {{- end }}
+
+{{- if .Values.jxRequirements.ingress.tls.enabled }}
+    tls:
+    - hosts:
+        - tekton-dashboard.{{ .Values.jxRequirements.ingress.domain | default "cluster.local" }}
+    {{- if hasKey .Values.jxRequirements.ingress.tls "secretName" }}
+      secretName: "{{ .Values.jxRequirements.ingress.tls.secretName }}"
+    {{- else if .Values.jxRequirements.ingress.tls.production }}
+      secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p"
+    {{- else }}
+      secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-s"
+    {{- end }}
+{{- end }}
