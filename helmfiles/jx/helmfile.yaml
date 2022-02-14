@@ -23,14 +23,14 @@ releases:
   - jx-values.yaml
   - ../../versionStream/charts/jxgh/lighthouse-webui-plugin/values.yaml.gotmpl
 - chart: bitnami/external-dns
-  version: 5.0.0
+  version: 6.0.2
   condition: jxRequirementsIngressExternalDNS.enabled
   name: external-dns
   values:
   - ../../versionStream/charts/bitnami/external-dns/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/jxboot-helmfile-resources
-  version: 1.1.12
+  version: 1.1.29
   name: jxboot-helmfile-resources
   values:
   - ../../versionStream/charts/jxgh/jxboot-helmfile-resources/values.yaml.gotmpl
@@ -54,7 +54,7 @@ releases:
   values:
   - jx-values.yaml
 - chart: jxgh/lighthouse
-  version: 1.5.2
+  version: 1.5.10
   name: lighthouse
   values:
   - ../../versionStream/charts/jxgh/lighthouse/values.yaml.gotmpl
