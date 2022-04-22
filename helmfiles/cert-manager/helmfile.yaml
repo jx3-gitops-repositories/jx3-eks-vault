@@ -9,7 +9,7 @@ repositories:
   url: https://charts.jetstack.io
 releases:
 - chart: jetstack/cert-manager
-  version: 1.4.4
+  version: 1.5.5
   condition: jxRequirementsIngressTLS.enabled
   name: cert-manager
   values:
