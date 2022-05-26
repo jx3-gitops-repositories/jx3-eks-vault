@@ -30,31 +30,31 @@ releases:
   - ../../versionStream/charts/bitnami/external-dns/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/jxboot-helmfile-resources
-  version: 1.1.29
+  version: 1.1.111
   name: jxboot-helmfile-resources
   values:
   - ../../versionStream/charts/jxgh/jxboot-helmfile-resources/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/jenkins-x-crds
-  version: 3.0.11
+  version: 3.0.12
   name: jenkins-x-crds
   values:
   - ../../versionStream/charts/jxgh/jenkins-x-crds/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/jx-pipelines-visualizer
-  version: 1.7.5
+  version: 1.8.2
   name: jx-pipelines-visualizer
   values:
   - ../../versionStream/charts/jxgh/jx-pipelines-visualizer/values.yaml.gotmpl
   - pv-values.yaml
   - jx-values.yaml
 - chart: jxgh/jx-preview
-  version: 0.0.192
+  version: 0.0.206
   name: jx-preview
   values:
   - jx-values.yaml
 - chart: jxgh/lighthouse
-  version: 1.5.10
+  version: 1.6.5
   name: lighthouse
   values:
   - ../../versionStream/charts/jxgh/lighthouse/values.yaml.gotmpl
@@ -72,7 +72,7 @@ releases:
   - ../../versionStream/charts/stable/chartmuseum/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/jx-build-controller
-  version: 0.3.9
+  version: 0.3.21
   name: jx-build-controller
   values:
   - ../../versionStream/charts/jxgh/jx-build-controller/values.yaml.gotmpl
