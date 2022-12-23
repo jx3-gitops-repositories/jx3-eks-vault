@@ -13,7 +13,7 @@ repositories:
   url: https://jenkins-x-charts.github.io/repo
 releases:
 - chart: bitnami/external-dns
-  version: 6.4.5
+  version: 6.7.0
   condition: jxRequirementsIngressExternalDNS.enabled
   name: external-dns
   values:
