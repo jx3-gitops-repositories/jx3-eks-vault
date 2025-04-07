@@ -62,7 +62,7 @@ releases:
   - ../../versionStream/charts/stable/chartmuseum/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/jx-build-controller
-  version: 0.5.19
+  version: 0.5.22
   name: jx-build-controller
   values:
   - ../../versionStream/charts/jxgh/jx-build-controller/values.yaml.gotmpl
