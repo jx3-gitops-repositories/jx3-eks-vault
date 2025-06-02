@@ -20,8 +20,6 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
-    devEnvApprovers:
-    - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
