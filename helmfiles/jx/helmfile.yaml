@@ -1,8 +1,8 @@
-filepath: ""
 environments:
   default:
     values:
     - jx-values.yaml
+---
 namespace: jx
 repositories:
 - name: stable
@@ -21,7 +21,7 @@ releases:
   - jx-values.yaml
   - ../../versionStream/charts/bitnami-oci/external-dns/values.yaml.gotmpl
 - chart: jxgh/jxboot-helmfile-resources
-  version: 1.1.524
+  version: 1.1.532
   name: jxboot-helmfile-resources
   values:
   - ../../versionStream/charts/jxgh/jxboot-helmfile-resources/values.yaml.gotmpl
@@ -62,7 +62,7 @@ releases:
   - ../../versionStream/charts/stable/chartmuseum/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/jx-build-controller
-  version: 0.5.30
+  version: 0.5.31
   name: jx-build-controller
   values:
   - ../../versionStream/charts/jxgh/jx-build-controller/values.yaml.gotmpl
@@ -74,5 +74,3 @@ releases:
   values:
   - ../../versionStream/charts/jxgh/acme-jx/values.yaml.gotmpl
   - jx-values.yaml
-templates: {}
-renderedvalues: {}

@@ -1,8 +1,8 @@
-filepath: ""
 environments:
   default:
     values:
     - jx-values.yaml
+---
 namespace: secret-infra
 repositories:
 - name: external-secrets
@@ -21,5 +21,3 @@ releases:
   name: wave
   values:
   - jx-values.yaml
-templates: {}
-renderedvalues: {}
