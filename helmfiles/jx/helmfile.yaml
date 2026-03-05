@@ -21,7 +21,7 @@ releases:
   - jx-values.yaml
   - ../../versionStream/charts/bitnami-oci/external-dns/values.yaml.gotmpl
 - chart: jxgh/jxboot-helmfile-resources
-  version: 1.2.24
+  version: 1.2.25
   name: jxboot-helmfile-resources
   values:
   - ../../versionStream/charts/jxgh/jxboot-helmfile-resources/values.yaml.gotmpl
@@ -44,7 +44,7 @@ releases:
   values:
   - jx-values.yaml
 - chart: jxgh/lighthouse
-  version: 1.26.5
+  version: 1.27.0
   name: lighthouse
   values:
   - ../../versionStream/charts/jxgh/lighthouse/values.yaml.gotmpl
