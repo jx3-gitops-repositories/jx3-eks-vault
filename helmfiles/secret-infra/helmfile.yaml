@@ -17,7 +17,7 @@ releases:
   - ../../versionStream/charts/external-secrets/kubernetes-external-secrets/values.yaml.gotmpl
   - jx-values.yaml
 - chart: wave-k8s/wave
-  version: 4.2.0
+  version: 4.5.0
   name: wave
   values:
   - jx-values.yaml
